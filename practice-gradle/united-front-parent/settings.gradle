@@ -1,0 +1,11 @@
+println("构建root项目______united-front-parent")
+rootProject.name = 'united-front-parent'
+include 'united-front-modules'
+include 'united-front-server'
+include 'united-front-modules:module-test'
+findProject(':united-front-modules:module-test')?.name = 'module-test'
+include 'united-front-server:united-front-admin-server'
+findProject(':united-front-server:united-front-admin-server')?.name = 'united-front-admin-server'
+
+
+
